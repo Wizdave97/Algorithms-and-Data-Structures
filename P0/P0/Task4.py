@@ -25,4 +25,21 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 def possible_telemarketers(calls,texts):
-    
+    phonebook={}
+    texting_list={}
+    receiving={}
+    for record in texts:
+        texting_list[record[0]]=record[0]
+        texting_list[record[1]]=record[1]
+    for record in calls:
+        receiving[record[1]]=record[1]
+    for record in calls:
+        if not(texting_list.get(record[0])) and not(receiving.get(record[0])):
+            phonebook[record[0]]=record[0]
+    phonebook=list(phonebook.values())
+    for i,tel in enumerate(phonebook):
+        phonebook[i]+='\n'
+    phonebook=sorted(phonebook)
+    phonebook=''.join(phonebook)
+    print("These numbers could be telemarketers:\n{}".format(phonebook))
+possible_telemarketers(calls,texts)
