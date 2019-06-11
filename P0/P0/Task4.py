@@ -43,3 +43,10 @@ def possible_telemarketers(calls,texts):
     phonebook=''.join(phonebook)
     print("These numbers could be telemarketers:\n{}".format(phonebook))
 possible_telemarketers(calls,texts)
+
+"""
+Time complexity can be calculated as
+f(n)=7+2n+n+2n
+    =5n+7
+Approximated as O(n)
+"""

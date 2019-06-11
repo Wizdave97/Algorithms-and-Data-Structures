@@ -20,3 +20,8 @@ Print messages:
 """
 print("First record of texts, {} texts {} at time {}".format(*first_text))
 print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(*last_call))
+"""
+Calulating the efficiency of the algorithm
+There are no loops in the algorithm so it has a worst case running time of O(4)
+we can therefore approximate the time complexity to O(1)
+"""

@@ -29,3 +29,12 @@ def count_telephone_numbers(call_list,text_list):
     total=len(phones)
     print("There are {} different telephone numbers in the records.".format(total))
 count_telephone_numbers(texts,calls)
+
+"""
+Time complexity for worst case scenario is
+if the combined input size for both lists is n then
+f(n)=(4*n)
+    =4n
+O(f(n))=4n
+the approximate time complexity is O(n)
+"""

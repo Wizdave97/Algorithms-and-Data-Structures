@@ -90,7 +90,7 @@ def part_b(calls):
             count+=1
         recieving=pattern.match(record[1])
         if calling and recieving:
-                phonebook[record[0]]=phonebook.get(record[0],0)+1
+            phonebook[record[0]]=phonebook.get(record[0],0)+1
     no_calls=list(phonebook.values())
     total=0.
     for value in no_calls:
@@ -98,3 +98,27 @@ def part_b(calls):
     percentage=round((total/count) * 100,2)
     print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percentage))
 part_b(calls)
+
+"""
+calculating the time complexity for the extract_bangalore_calls algorithm:
+It has a single for loop that runs for n in the worst case
+Assume in the worst case all conditionals are checked
+f(n)=2 + 20(n)
+O(f(n))=20n + 2
+approximately O(n)
+
+Time complexity for part_a
+ there are two for loops and since they are not nested on the worst case
+ they in the range of n which is the input size
+ assume in the worst case, the size of the dictionary and the set are equal with combined size n
+ f(n)=n+ 4 + 2*n
+     =3n + 5
+O(f(n))=3n + 5
+O(f(n)) can be approximated to O(n)
+
+Time complexity for part_b
+Two for loops that run on worst case in time n
+f(n)=6+ 7*n + n
+    =8n + 6
+approximated as O(n)
+"""

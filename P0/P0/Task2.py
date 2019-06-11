@@ -28,3 +28,11 @@ def longest_call(calls):
     telephone=[number for number in phonebook if phonebook[number]==longest_time]
     print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(*telephone,longest_time))
 longest_call(calls)
+"""
+worst case time complexity of the algorithm
+the for loop runs for all the values in the list on the worstcase
+f(n)=4 + 2*n
+    =2n + 4
+O(f(n))= 2n + 4
+time complexity can be approximated as O(n)
+"""
